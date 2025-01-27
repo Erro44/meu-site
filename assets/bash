@@ -1,0 +1,15 @@
+/portfolio
+  /assets
+    /images
+      /casamentos
+        casamento1.jpg
+        casamento2.jpg
+      /retratos
+        retrato1.jpg
+        retrato2.jpg
+      /paisagens
+        paisagem1.jpg
+        paisagem2.jpg
+  index.html
+  styles.css
+  script.js

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Fotografia - Capturando momentos únicos e especiais.">
+    <meta name="author" content="[Seu Nome]">
+    <meta property="og:title" content="Portfólio de Fotografia">
+    <meta property="og:description" content="Capturando momentos especiais com criatividade e paixão.">
+    <meta property="og:image" content="assets/images/preview.jpg">
+    <meta property="og:url" content="https://seusite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Portfólio de Fotografia</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <!-- Ícone Flutuante do WhatsApp -->
+    <a href="https://wa.me/5521965990020" target="_blank" id="whatsapp-icon" aria-label="Entre em contato pelo WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo ao meu Portfólio</h1>
+            <p>Capturando momentos especiais com criatividade e paixão.</p>
+        </div>
+    </section>
+
+    <!-- Seção Portfólio -->
+    <section id="portfolio">
+        <h2>Meu Portfólio</h2>
+        <!-- Galeria de Categorias -->
+   
+        <section id="albums" class="albums-section">
+            <h2>Meus Álbuns</h2>
+        
+            <div class="albums-grid">
+                <!-- denis -->
+                <div class="album-card">
+                    <img src="assets/images/Denis Dj/denis1.jpg" alt="Denis Dj" class="album-cover">
+                   
+                    <h3>Denis Dj</h3>
+                    <p>Momentos especiais para recordar para sempre.</p>
+                    <a href="#denis" class="view-album-btn">Ver Álbum</a>
+                </div>
+        
+                <!-- Álbum Retratos -->
+                <div class="album-card">
+                    <img src="assets/images/retratos/retrato1.jpg" alt="Álbum Retratos" class="album-cover">
+                    <h3>Retratos</h3>
+                    <p>Capturando a essência em cada detalhe.</p>
+                    <a href="#retratos" class="view-album-btn">Ver Álbum</a>
+                </div>
+        
+                <!-- Álbum Paisagens -->
+                <div class="album-card">
+                    <img src="assets/images/paisagens/paisagem1.jpg" alt="Álbum Paisagens" class="album-cover">
+                    <h3>Paisagens</h3>
+                    <p>Belezas naturais em cenários inesquecíveis.</p>
+                    <a href="#paisagens" class="view-album-btn">Ver Álbum</a>
+                </div>
+            </div>
+        </section>
+        
+    <!-- Seção Sobre -->
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou jotta, fotógrafo apaixonado por capturar momentos especiais e contar histórias através das lentes. Meu trabalho abrange <strong>fotografia de casamentos, retratos e paisagens</strong>.</p>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <form action="https://formspree.io/f/xrbbvzzw" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <img src="logo.png" alt="Logo do Fotógrafo" class="footer-logo">
+        </div>
+        <p>&copy; 2025 [lucas]. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Animação de Fade-In -->
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

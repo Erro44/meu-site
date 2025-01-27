@@ -1,0 +1,316 @@
+
+/* Variáveis de Tema */
+:root {
+    --main-font: 'Arial, sans-serif';
+    --main-bg-color: #f9f9f9;
+    --secondary-bg-color: #f4f4f4;
+    --header-bg-color: rgba(67, 73, 74, 0.289);
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
+    --highlight-color: #25d366;
+    --highlight-hover-color: #128c7e;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--secondary-text-color);
+    font-weight: bold;
+}
+
+/* Seção Hero */
+.hero {
+    background-image: linear-gradient(to bottom right, rgb(105, 102, 102), rgb(255, 255, 255));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+
+/* Portfolio */
+/* Seção de Álbuns */
+.albums-section {
+    padding: 40px 20px;
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+}
+
+.albums-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.album-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.album-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.album-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 15px;
+    color: var(--main-text-color);
+}
+
+.album-card p {
+    font-size: 1rem;
+    margin: 10px 15px 20px;
+    color: #555;
+}
+
+.view-album-btn {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 10px 20px;
+    background-color: var(--highlight-color);
+    color: var(--secondary-text-color);
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.view-album-btn:hover {
+    background-color: var(--highlight-hover-color);
+}
+
+
+/* About */
+#about {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+/* Formulário de Contato */
+#contact {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+form button {
+    background-color: var(--highlight-color);
+    color: var(--secondary-text-color);
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--highlight-hover-color);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 5px;
+}
+
+/* Logo do Rodapé */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    max-width: 140px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Ícone flutuante do WhatsApp */
+#whatsapp-icon {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--highlight-color);
+    border-radius: 20%;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease;
+}
+
+#whatsapp-icon:hover {
+    background-color: var(--highlight-hover-color);
+}
+
+#whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    position: relative;
+    cursor: auto;
+}
+
+
+
+/* Animação de zoom com fade */
+@keyframes zoomFade {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Estilo inicial do texto */
+#footer p {
+    font-size: 1.2rem; /* Ajuste do tamanho do texto */
+    color: #fff;
+    margin: 10px 0;
+    cursor: pointer; /* Adiciona o cursor de clique */
+}
+
+/* Classe para ativar a animação */
+.animate {
+    animation: zoomFade 0.6s ease-in-out;
+}
